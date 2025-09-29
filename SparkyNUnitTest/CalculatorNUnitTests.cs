@@ -37,5 +37,20 @@ namespace SparkyNUnitTest
            // Assert.That(checkOdd, Is.EqualTo(true));
         }
 
+        [Test]
+        [TestCase(11)]
+        [TestCase(14)]
+
+        public void IsOddChecker_InputOffNumber_ReturnTrue(int a)
+
+        {
+            Calculator calc = new();
+
+            bool isOdd = calc.IsOddNumber(a);
+
+            Assert.That(isOdd, Is.EqualTo(true));
+
+        }
+
     }
 }
