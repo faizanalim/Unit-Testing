@@ -17,9 +17,25 @@ namespace SparkyNUnitTest
             //Arrange
             Calculator calc = new();
             //Act
-            int result = calc.AddNumbers(10, 40);
+            int result = calc.AddNumbers(10,5 );
+            bool checkOdd = calc.IsOddNumber(6);
             //Assert
-            Assert.That(result, Is.EqualTo(30));
+            Assert.That(result, Is.EqualTo(15));
+
+
         }
+        [Test]
+        public void CheckOdd()
+        {
+            //Arrange
+            Calculator calc = new();
+            //Act
+            bool checkOdd = calc.IsOddNumber(15);
+            //Assert
+
+            Assert.That(checkOdd, Is.True);
+           // Assert.That(checkOdd, Is.EqualTo(true));
+        }
+
     }
 }
